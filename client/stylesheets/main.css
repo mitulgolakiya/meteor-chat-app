@@ -6,19 +6,28 @@
     background-color: #009587;
 }
 
+.headerDiv {
+    position: fixed;
+    top: 10px;
+    left: 40px;
+    right: 50px;
+    height: 20px;
+
+}
+
 .sidebar {
-    width: 200px;
+    width: 260px;
     position: fixed;
     left: 40px;
-    top: 40px;
+    top: 50px;
     bottom: 30px;
 }
 
 .chatContainer {
     position: fixed;
-    top: 40px;
+    top: 50px;
     bottom: 20px;
-    left: 260px;
+    left: 315px;
     right: 25px;
     background-color: #ededed;
 }

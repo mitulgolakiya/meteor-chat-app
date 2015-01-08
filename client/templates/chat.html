@@ -1,42 +1,44 @@
 <template name="chat">
-    <div class="container">
-        <div class="sidebar">
-            <div class="panel panel-info" style="height: 100%;text-align: left">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Users</h3>
-                </div>
-                <div class="panel-body">
-                    <div class="list-group">
-                        {{#each allUsers}}
-                            {{> userRenderer}}
-                        {{/each}}
-                    </div>
+    <div class="headerDiv">
+        <span class="pull-left" style="font-size: 18px">Hi, {{currUserName}}</span>
+        <a class="pull-right" style="font-size: 16px" href="sign-out">Logout</a>
+    </div>
+    <div class="sidebar">
+        <div class="panel panel-info" style="height: 100%;text-align: left">
+            <div class="panel-heading">
+                <h3 class="panel-title">Users</h3>
+            </div>
+            <div class="panel-body">
+                <div class="list-group">
+                    {{#each allUsers}}
+                        {{> userRenderer}}
+                    {{/each}}
                 </div>
             </div>
         </div>
-        <div class="chatContainer">
-            <div class="chatMsgContainer">
-                <div class="panel panel-info msgPanel">
-                    <div class="panel-heading">
-                        <h3 class="panel-title" style="text-align: left">Messages</h3>
+    </div>
+    <div class="chatContainer">
+        <div class="chatMsgContainer">
+            <div class="panel panel-info msgPanel">
+                <div class="panel-heading">
+                    <h3 class="panel-title" style="text-align: left">Messages</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="list-group msgListGroup">
+                        {{#each messages}}
+                            {{> chatMessage}}
+                        {{/each}}
                     </div>
-                    <div class="panel-body">
-                        <div class="list-group msgListGroup">
-                            {{#each messages}}
-                                {{> chatMessage}}
-                            {{/each}}
+                    <div class="clearfix"></div>
+                    <div class="sendMsgContainer">
+                        <div class="msgContainer pull-left">
+                            <input type="text" class="form-control" id="textMessage"
+                                   placeholder="Enter your message here"
+                                   style="font-size: 18px">
+                            <span class="material-input"></span>
                         </div>
-                        <div class="clearfix"></div>
-                        <div class="sendMsgContainer">
-                            <div class="msgContainer pull-left">
-                                <input type="text" class="form-control" id="textMessage"
-                                       placeholder="Enter your message here"
-                                       style="font-size: 18px">
-                                <span class="material-input"></span>
-                            </div>
-                            <div class="btnContainer pull-left">
-                                <button id="btnSend" class="btn btn-info">Send</button>
-                            </div>
+                        <div class="btnContainer pull-left">
+                            <button id="btnSend" class="btn btn-info">Send</button>
                         </div>
                     </div>
                 </div>
@@ -47,10 +49,13 @@
 
 <template name="userRenderer">
     <div class="list-group-item" style="padding-left: 0;padding-right: 0;">
-        <div class="row-content" style="min-height: 35px;width: 100%;margin-bottom: 13px">
+        <div class="row-picture">
+            <img class="circle" src="{{profilePicture}}" alt="icon">
+        </div>
+        <div class="row-content" style="padding-top: 10px">
             <h3 class="list-group-item-heading"
-                style="text-align: left;font-size: 18px;line-height: 15px;color: #03a9f4">
-                {{profile.firstName}} {{profile.lastName}}
+                style="text-align: left;font-size: 18px;line-height: 15px;color: #03a9f4;margin-bottom: 10px">
+                {{profile.name}}
             </h3>
             {{#if userStatusBool}}
                 <i class="mdi-image-lens pull-left" style="color: green;"></i>
@@ -66,7 +71,10 @@
 
 <template name="chatMessage">
     <div class="list-group-item">
-        <div class="row-content" style="min-height: 55px;width: 100%">
+        <div class="row-picture" style="width: 40px;height: 40px">
+            <img class="circle" src="{{profilePicture}}" alt="icon" style="width: 38px;height: 38px">
+        </div>
+        <div class="row-content" style="min-height: 55px; margin-left: 10px">
             <div class="least-content" style="font-size: 12px">{{formatDate sentOn}}</div>
             <h4 class="list-group-item-heading"
                 style="text-align: left;font-size: 15px;line-height: 15px;color: #03a9f4">{{user}}:</h4>

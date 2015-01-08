@@ -11,3 +11,7 @@ momentjs:moment
 joshowens:accounts-entry
 fezvrasta:bootstrap-material-design
 mizzao:user-status
+accounts-ui
+accounts-google
+accounts-facebook
+accounts-twitter

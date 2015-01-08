@@ -6,21 +6,14 @@ Meteor.startup(function () {
     AccountsEntry.config({
         dashboardRoute: 'chat',
         homeRoute: '/',
+        showOtherLoginServices: true,
         extraSignUpFields: [{
-            field: "firstName",
+            field: "name",
             name: "",
-            label: "First Name",
-            placeholder: "First Name",
+            label: "Full Name",
+            placeholder: "Full Name",
             type: "text",
             required: true
-            },
-            {
-                field: "lastName",
-                name: "",
-                label: "Last Name",
-                placeholder: "Last Name",
-                type: "text",
-                required: true
             }
         ]
     })

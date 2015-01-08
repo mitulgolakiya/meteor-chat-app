@@ -5,7 +5,7 @@
 if (Meteor.isServer) {
 
     Meteor.publish('users', function () {
-        return Meteor.users.find({}, {fields: {profile: 1, status: 1}});
+        return Meteor.users.find({}, {fields: {profile: 1, status: 1, services: 1}});
     });
 
     Meteor.publish('Chat', function () {
@@ -14,9 +14,9 @@ if (Meteor.isServer) {
 
     Meteor.methods({
         newChatMessage: function (message) {
-
             var chatObj = {
-                'user': Meteor.user().profile.firstName,
+                'userId': Meteor.user()._id,
+                'user': Meteor.user().profile.name,
                 'message': message,
                 'sentOn': new Date()
             };
