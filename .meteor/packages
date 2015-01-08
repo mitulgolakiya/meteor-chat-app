@@ -7,10 +7,7 @@
 meteor-platform
 iron:router
 accounts-password
-maazalik:highcharts
-reactive-var
 momentjs:moment
-rzymek:randomcolor
 joshowens:accounts-entry
 fezvrasta:bootstrap-material-design
 mizzao:user-status
