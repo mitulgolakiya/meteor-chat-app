@@ -1,0 +1,36 @@
+<template name="profileEdit">
+    <div id="edit-profile-dialog" class="modal fade" tabindex="-1" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">Edit Profile</h4>
+                </div>
+                <div class="modal-content" style="margin: 20px 10px 50px 10px;">
+                    <form>
+                        <div class="form-group">
+                            <label for="inputFullName" style="margin-top: 5px;" class="col-lg-2 control-label">Full
+                                Name</label>
+
+                            <div class="col-lg-10">
+                                <div class="form-control-wrapper">
+                                    <input type="text" class="form-control empty" value="{{currUserFullName}}"
+                                           id="inputFullName" placeholder="Full Name" required>
+                                    <span class="material-input"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-info btn-raised" id="btnSave" style="margin-top: 2px">
+                        Save
+                    </button>
+                    <button class="btn btn-default btn-raised" data-dismiss="modal" style="color: rgba(0,0,0,.84);">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

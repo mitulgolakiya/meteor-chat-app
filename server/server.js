@@ -22,6 +22,11 @@ if (Meteor.isServer) {
             };
 
             Chat.insert(chatObj);
+        },
+        updateProfileName: function (name) {
+            var id = Meteor.user()._id;
+            Meteor.users.update(id, {$set: {profile: {name: name}}});
         }
+
     });
 }

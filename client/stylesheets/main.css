@@ -12,7 +12,6 @@
     left: 40px;
     right: 50px;
     height: 20px;
-
 }
 
 .sidebar {
@@ -67,6 +66,15 @@
 .btnContainer {
     position: absolute;
     right: 10px;
+}
+
+.usersListGroup {
+    position: absolute;
+    top: 55px;
+    right: 10px;
+    left: 15px;
+    bottom: 10px;
+    overflow: scroll;
 }
 
 .msgListGroup {
