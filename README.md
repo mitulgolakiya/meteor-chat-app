@@ -26,12 +26,12 @@ App uses following packages
 
 ## Registration
 ![Image of Registration]
-(https://drive.google.com/file/d/0B5kWGBdVjC7RU0tmTThuOFgyN2s/view?usp=sharing)
+(http://drive.google.com/uc?export=view&id=0B5kWGBdVjC7RU0tmTThuOFgyN2s)
 
 ## Login
 ![Image of Login]
-(https://drive.google.com/file/d/0B5kWGBdVjC7ROXM4eEE4Tnc1bmM/view?usp=sharing)
+(http://drive.google.com/uc?export=view&id=0B5kWGBdVjC7ROXM4eEE4Tnc1bmM)
 
 ## Chatting Screen
 ![Image of Chatting]
-(https://drive.google.com/file/d/0B5kWGBdVjC7RR09WVlBESTUza1U/view?usp=sharing)
+(http://drive.google.com/uc?export=view&id=0B5kWGBdVjC7RR09WVlBESTUza1U)
