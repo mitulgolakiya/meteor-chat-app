@@ -31,55 +31,20 @@
                     </div>
                     <div class="clearfix"></div>
                     <div class="sendMsgContainer">
-                        <div class="msgContainer pull-left">
-                            <input type="text" class="form-control" id="textMessage"
-                                   placeholder="Enter your message here"
-                                   style="font-size: 18px">
-                            <span class="material-input"></span>
-                        </div>
-                        <div class="btnContainer pull-left">
-                            <button id="btnSend" class="btn btn-info">Send</button>
-                        </div>
+                        <form id="chatMsgForm">
+                            <div class="msgContainer pull-left">
+                                <input type="text" class="form-control" id="textMessage"
+                                       placeholder="Enter your message here"
+                                       style="font-size: 18px">
+                                <span class="material-input"></span>
+                            </div>
+                            <div class="btnContainer pull-left">
+                                <button id="btnSend" type="submit" class="btn btn-info">Send</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</template>
-
-<template name="userRenderer">
-    <div class="list-group-item" style="padding-left: 0;padding-right: 0;">
-        <div class="row-picture">
-            <img class="circle" src="{{profilePicture}}" alt="icon">
-        </div>
-        <div class="row-content" style="padding-top: 10px">
-            <h3 class="list-group-item-heading"
-                style="text-align: left;font-size: 18px;line-height: 15px;color: #03a9f4;margin-bottom: 10px">
-                {{profile.name}}
-            </h3>
-            {{#if userStatusBool}}
-                <i class="mdi-image-lens pull-left" style="color: green;"></i>
-            {{else}}
-                <i class="mdi-image-lens pull-left" style="color: red;"></i>
-            {{/if}}
-            <p class="list-group-item-text pull-left"
-               style="text-align: left;font-size: 12px;line-height: 12px; margin-left: 5px">{{userStatus}}
-            </p>
-        </div>
-    </div>
-</template>
-
-<template name="chatMessage">
-    <div class="list-group-item">
-        <div class="row-picture" style="width: 40px;height: 40px">
-            <img class="circle" src="{{profilePicture}}" alt="icon" style="width: 38px;height: 38px">
-        </div>
-        <div class="row-content" style="min-height: 55px; margin-left: 10px">
-            <div class="least-content" style="font-size: 12px">{{formatDate sentOn}}</div>
-            <h4 class="list-group-item-heading"
-                style="text-align: left;font-size: 15px;line-height: 15px;color: #03a9f4">{{user}}:</h4>
-
-            <p class="list-group-item-text" style="text-align: left;font-size: 15px;line-height: 15px;">{{message}}</p>
         </div>
     </div>
 </template>

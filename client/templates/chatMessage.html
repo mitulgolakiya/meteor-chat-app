@@ -1,0 +1,14 @@
+<template name="chatMessage">
+    <div class="list-group-item">
+        <div class="row-picture" style="width: 40px;height: 40px">
+            <img class="circle" src="{{profilePicture}}" alt="icon" style="width: 38px;height: 38px">
+        </div>
+        <div class="row-content" style="min-height: 55px; margin-left: 10px">
+            <div class="least-content" style="font-size: 12px">{{formatDate sentOn}}</div>
+            <h4 class="list-group-item-heading"
+                style="text-align: left;font-size: 15px;line-height: 15px;color: #03a9f4">{{user}}:</h4>
+
+            <p class="list-group-item-text" style="text-align: left;font-size: 15px;line-height: 15px;">{{message}}</p>
+        </div>
+    </div>
+</template>
